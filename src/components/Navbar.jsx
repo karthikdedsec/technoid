@@ -140,13 +140,13 @@ const Navbar = () => {
         </div>
         {state ? (
           <img
-            className="absolute top-6 left-[40%] md:left-[46%] w-[111px] h-[80px] object-contain"
+            className="absolute top-6 left-[36%] md:left-[46%] w-[111px] h-[80px] object-contain"
             src={LogoDark}
             alt="logo"
           />
         ) : (
           <img
-            className="absolute top-6 left-[40%] md:left-[46%] w-[111px] h-[80px] object-contain"
+            className="absolute top-6 left-[36%] md:left-[46%] w-[111px] h-[80px] object-contain"
             src={Logo}
             alt="logo"
           />
