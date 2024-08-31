@@ -30,13 +30,13 @@ const Hero = () => {
       <Navbar />
       {state ? (
         <img
-          className="w-full absolute top-0 md:-top-16 lg:-top-40 z-[39] object-fill"
+          className="w-full absolute top-0 md:-top-16 lg:-top-64 z-[39] object-fill"
           src={NavDark}
           alt="nav background"
         />
       ) : (
         <img
-          className="w-full absolute top-14 md:top-0 lg:top-0 -z-50 object-fill"
+          className="w-full absolute top-20 md:top-0 lg:top-0 -z-50 object-fill"
           src={NavBg}
           alt="nav background"
         />
