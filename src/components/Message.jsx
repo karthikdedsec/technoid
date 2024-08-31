@@ -226,8 +226,10 @@ const Message = () => {
       <div className="section-container pt-52">
         <div className="flex justify-center pt-9 pb-16">
           <button
-            className={`py-3 px-12 mx-auto rounded-full text-white text-lg font-Grotesk font-semibold ${
-              state ? "bg-[#F5C547] !text-black" : "bg-[#8858C6]"
+            className={`py-3 px-12 mx-auto rounded-full text-white text-lg font-Grotesk font-semibold transition-all duration-300 ease-in-out ${
+              state
+                ? "bg-[#F5C547] !text-black hover:bg-[white]"
+                : "bg-[#8858C6] hover:bg-[#F5C547]"
             }`}
           >
             {language ? "أعد الرحلة" : "Replay the journey"}

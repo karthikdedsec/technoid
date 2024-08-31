@@ -66,8 +66,10 @@ const FamilyEvents = () => {
                 : "After we emerge from our Eid coma, everyone’s excited about Eid outings. Where do we go? What adventures await? Don't worry, we have you covered with Eid events."}
             </p>
             <button
-              className={`py-2 px-11 md:px-4 md:w-[460px] mx-auto rounded-full text-white text-lg font-Grotesk font-semibold ${
-                state ? "bg-[#F5C547] !text-black" : "bg-[#8858C6]"
+              className={`py-2 px-11 md:px-4 md:w-[460px] mx-auto rounded-full text-white text-lg font-Grotesk font-semibold transition-all duration-300 ease-in-out ${
+                state
+                  ? "bg-[#F5C547] !text-black hover:bg-[white]"
+                  : "bg-[#8858C6] hover:bg-[#F5C547]"
               }`}
             >
               {language ? "اكتشف أحداث العيد لدينا" : "Discover our Eid Events"}

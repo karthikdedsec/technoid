@@ -37,8 +37,10 @@ const Identity = () => {
               : "After a Whole Year of patiently,but eagerly waiting,Eid is finally here! Hands up everyone who missed the incense smells, the outfits  and the delicious food? But First Lets get Eid -ready with our outfits"}
           </p>
           <button
-            className={`py-2 px-4 w-44 mx-auto rounded-full text-white text-lg font-Grotesk font-semibold ${
-              state ? "bg-[#F5C547] !text-black" : "bg-[#8858C6]"
+            className={`py-2 px-4 w-44 mx-auto rounded-full text-white text-lg font-Grotesk font-semibold transition-all duration-300 ease-in-out ${
+              state
+                ? "bg-[#F5C547] !text-black hover:bg-[white]"
+                : "bg-[#8858C6] hover:bg-[#F5C547]"
             }`}
           >
             {language ? "هوية العيد" : "Eid identity"}

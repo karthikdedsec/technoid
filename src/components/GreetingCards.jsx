@@ -57,15 +57,19 @@ const GreetingCards = () => {
           </h3>
           <div className="flex flex-col md:flex-row items-center justify-center gap-2 pt-8">
             <button
-              className={`py-2 px-6 md:py-4 md:px-7 w-full md:w-72 rounded-full text-white text-base font-Grotesk font-medium ${
-                state ? "bg-[#F5C547] !text-black" : "bg-[#8858C6]"
+              className={`py-2 px-6 md:py-4 md:px-7 w-full md:w-72 rounded-full text-white text-base font-Grotesk font-medium transition-all duration-300 ease-in-out ${
+                state
+                  ? "bg-[#F5C547] !text-black hover:bg-[white]"
+                  : "bg-[#8858C6] hover:bg-[#F5C547]"
               }`}
             >
               {language ? "تحياتك" : "Your Greeting"}
             </button>
             <button
-              className={`py-2 px-6 md:py-4 md:px-7 w-full md:w-72 rounded-full text-white text-base font-Grotesk font-medium ${
-                state ? "bg-[#F5C547] !text-black" : "bg-[#8858C6]"
+              className={`py-2 px-6 md:py-4 md:px-7 w-full md:w-72 rounded-full text-white text-base font-Grotesk font-medium transition-all duration-300 ease-in-out ${
+                state
+                  ? "bg-[#F5C547] !text-black hover:bg-[white]"
+                  : "bg-[#8858C6] hover:bg-[#F5C547]"
               }`}
             >
               {language ? "اصنع بنفسك" : "Create Your Own"}

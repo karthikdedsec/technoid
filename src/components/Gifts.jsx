@@ -1,6 +1,7 @@
 import BlueLine from "../assets/eventsline.png";
 import GreenLine from "../assets/giftgreenline.png";
 import Wave from "../assets/familywave.png";
+import WaveDarks from "../assets/familywavedark.png";
 import Father from "../assets/father.png";
 import Mother from "../assets/mother.png";
 import Daughter from "../assets/daughter.png";
@@ -49,7 +50,7 @@ const Gifts = () => {
       />
       <img
         className="absolute z-40 -bottom-7 md:-bottom-[300px] lg:-bottom-80 left-0 w-64 h-64  md:w-[580px] md:h-[580px] object-contain"
-        src={Wave}
+        src={state ? WaveDarks : Wave}
         alt="family wave"
       />
       <img

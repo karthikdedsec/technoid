@@ -67,29 +67,37 @@ const Events = () => {
           <div className="flex justify-center items-center gap-9">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-2">
               <button
-                className={` md:py-4 md:px-7 w-[180px] h-[60px] md:w-auto md:h-auto rounded-full text-white text-sm md:text-lg font-Grotesk font-medium ${
-                  state ? "bg-[#F5C547] !text-black" : "bg-[#8858C6]"
+                className={` md:py-4 md:px-7 w-[180px] h-[60px] md:w-auto md:h-auto rounded-full text-white text-sm md:text-lg font-Grotesk font-medium transition-all duration-300 ease-in-out ${
+                  state
+                    ? "bg-[#F5C547] !text-black hover:bg-[white]"
+                    : "bg-[#8858C6] hover:bg-[#F5C547]"
                 }`}
               >
                 {language ? "كتيب أحداث العيد" : "Eid Events Booklet"}
               </button>
               <button
-                className={` md:py-4 md:px-7 w-[180px] h-[60px]  md:w-auto md:h-auto rounded-full text-white text-sm md:text-lg font-Grotesk font-medium ${
-                  state ? "bg-[#F5C547] !text-black" : "bg-[#8858C6]"
+                className={` md:py-4 md:px-7 w-[180px] h-[60px]  md:w-auto md:h-auto rounded-full text-white text-sm md:text-lg font-Grotesk font-medium transition-all duration-300 ease-in-out ${
+                  state
+                    ? "bg-[#F5C547] !text-black hover:bg-[white]"
+                    : "bg-[#8858C6] hover:bg-[#F5C547]"
                 }`}
               >
                 {language ? "بطاقات تهنئة" : "Greeting Cards"}
               </button>
               <button
-                className={` md:py-4 md:px-7 w-[180px] h-[60px]  md:w-auto md:h-auto rounded-full text-white text-sm md:text-lg font-Grotesk font-medium ${
-                  state ? "bg-[#F5C547] !text-black" : "bg-[#8858C6]"
+                className={` md:py-4 md:px-7 w-[180px] h-[60px]  md:w-auto md:h-auto rounded-full text-white text-sm md:text-lg font-Grotesk font-medium transition-all duration-300 ease-in-out ${
+                  state
+                    ? "bg-[#F5C547] !text-black hover:bg-[white]"
+                    : "bg-[#8858C6] hover:bg-[#F5C547]"
                 }`}
               >
                 {language ? "ديكورات المنازل" : "Houses Decorations"}
               </button>
               <button
-                className={` md:py-4 md:px-7 w-[180px] h-[60px]  md:w-auto md:h-auto rounded-full text-white text-sm md:text-lg font-Grotesk font-medium ${
-                  state ? "bg-[#F5C547] !text-black" : "bg-[#8858C6]"
+                className={` md:py-4 md:px-7 w-[180px] h-[60px]  md:w-auto md:h-auto rounded-full text-white text-sm md:text-lg font-Grotesk font-medium transition-all duration-300 ease-in-out ${
+                  state
+                    ? "bg-[#F5C547] !text-black hover:bg-[white]"
+                    : "bg-[#8858C6] hover:bg-[#F5C547]"
                 }`}
               >
                 {language ? "أوسمة الشركات" : "Companies Decorations"}
