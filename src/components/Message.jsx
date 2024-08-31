@@ -122,7 +122,7 @@ const Message = () => {
           alt="house"
         />
         <img
-          className="absolute object-contain w-32 h-32 sm:w-52 sm:h-52 top-44 sm:top-64 right-[140px] sm:right-[480px]"
+          className="absolute object-contain w-32 h-32 sm:w-52 sm:h-52 top-44 sm:top-64 right-[140px] sm:right-[480px] lg:top-72"
           src={Tree}
           alt="tree"
         />
@@ -147,7 +147,7 @@ const Message = () => {
           alt="family wave"
         />
         <img
-          className="absolute object-contain w-48 h-48 sm:w-96 sm:h-96 top-36 sm:top-44 left-40 sm:left-80 z-20"
+          className="absolute object-contain w-48 h-48 sm:w-96 sm:h-96 top-36 sm:top-44 left-40 sm:left-80 z-20 lg:top-56"
           src={Father}
           alt="a father holding his son"
         />
@@ -157,7 +157,7 @@ const Message = () => {
           alt="mother holding bag"
         />
         <img
-          className="absolute object-contain w-36 h-36 sm:w-72 sm:h-72 top-52 sm:top-64 left-52 sm:left-[470px] z-20"
+          className="absolute object-contain w-36 h-36 sm:w-72 sm:h-72 top-52 sm:top-64 left-52 sm:left-[470px] z-20 lg:top-72"
           src={Daughter}
           alt="daughter"
         />
