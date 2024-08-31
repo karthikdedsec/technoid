@@ -4,14 +4,27 @@ import GreetingCardArabic from "../assets/greetingcardarabic.png";
 import GreetingCardArabicWhite from "../assets/greetingcardarabicwhite.png";
 import Balloon from "../assets/purpleballoon.png";
 import Cookie from "../assets/bigCookie.png";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import PagesModal from "./PagesModal";
 const GreetingCards = () => {
   const { state, language } = useContext(ThemeContext);
+  const [modal, setModal] = useState(false);
+  const buttonHandler = () => {
+    setModal(true);
+  };
   const { scrollY } = useScroll();
   return (
     <div className="w-full min-h-screen">
+      {modal && (
+        <PagesModal
+          setModal={setModal}
+          content={<img src={!language ? GreetingCard2 : GreetingCardArabic} />}
+          button={!language ? "close" : "يغلق"}
+        />
+      )}
+
       <div className="section-container">
         <div className="py-44">
           <div className="relative flex gap-3 justify-center items-center">
@@ -57,6 +70,7 @@ const GreetingCards = () => {
           </h3>
           <div className="flex flex-col md:flex-row items-center justify-center gap-2 pt-8">
             <button
+              onClick={buttonHandler}
               className={`py-2 px-6 md:py-4 md:px-7 w-full md:w-72 rounded-full text-white text-base font-Grotesk font-medium transition-all duration-300 ease-in-out ${
                 state
                   ? "bg-[#F5C547] !text-black hover:bg-[white]"

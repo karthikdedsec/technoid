@@ -65,15 +65,18 @@ const FamilyEvents = () => {
                 ? "بعد خروجنا من غيبوبة العيد، أصبح الجميع متحمسين لنزهات العيد. أين نذهب؟ ما المغامرات التي تنتظر؟ لا تقلق، لقد قمنا بتغطية أحداث العيد."
                 : "After we emerge from our Eid coma, everyone’s excited about Eid outings. Where do we go? What adventures await? Don't worry, we have you covered with Eid events."}
             </p>
-            <button
-              className={`py-2 px-11 md:px-4 md:w-[460px] mx-auto rounded-full text-white text-lg font-Grotesk font-semibold transition-all duration-300 ease-in-out ${
+            <a
+              href="https://dubai.platinumlist.net/eid"
+              target="_blank"
+              rel="noreferrer noopener"
+              className={`py-2 px-11 md:px-4 md:w-[460px] mx-auto text-center rounded-full text-white text-lg font-Grotesk font-semibold transition-all duration-300 ease-in-out ${
                 state
                   ? "bg-[#F5C547] !text-black hover:bg-[white]"
                   : "bg-[#8858C6] hover:bg-[#F5C547]"
               }`}
             >
               {language ? "اكتشف أحداث العيد لدينا" : "Discover our Eid Events"}
-            </button>
+            </a>
             {/* absolute */}
             <img
               className="absolute animate-float top-8 md:-top-10 left-0 md:left-16 w-36 h-36 md:w-auto object-contain"

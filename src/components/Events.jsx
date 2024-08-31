@@ -7,12 +7,18 @@ import TitleArabicDark from "../assets/allahakbarardark.png";
 import GreenBalloon from "../assets/greenballoon.png";
 import RedBalloon from "../assets/redballoon.png";
 import Redline from "../assets/eventredline.png";
+import Booklet from "../assets/booklet.png";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+import PagesModal from "./PagesModal";
 
 const Events = () => {
   const { state, language } = useContext(ThemeContext);
+  const [modal, setModal] = useState(false);
+  const buttonHandler = () => {
+    setModal(true);
+  };
   const { scrollY } = useScroll();
   const x1 = useTransform(scrollY, [0, 2000], [0, 400]);
   const x2 = useTransform(scrollY, [0, 2000], [0, -400]);
@@ -32,6 +38,13 @@ const Events = () => {
   );
   return (
     <div className="relative w-full">
+      {modal && (
+        <PagesModal
+          setModal={setModal}
+          content={<img src={Booklet} />}
+          button={!language ? "close" : "يغلق"}
+        />
+      )}
       <motion.img
         style={{ x: x1 }}
         className="absolute object-contain -top-32 -left-[470px]"
@@ -67,6 +80,7 @@ const Events = () => {
           <div className="flex justify-center items-center gap-9">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-2">
               <button
+                onClick={buttonHandler}
                 className={` md:py-4 md:px-7 w-[180px] h-[60px] md:w-auto md:h-auto rounded-full text-white text-sm md:text-lg font-Grotesk font-medium transition-all duration-300 ease-in-out ${
                   state
                     ? "bg-[#F5C547] !text-black hover:bg-[white]"
@@ -76,6 +90,7 @@ const Events = () => {
                 {language ? "كتيب أحداث العيد" : "Eid Events Booklet"}
               </button>
               <button
+                onClick={buttonHandler}
                 className={` md:py-4 md:px-7 w-[180px] h-[60px]  md:w-auto md:h-auto rounded-full text-white text-sm md:text-lg font-Grotesk font-medium transition-all duration-300 ease-in-out ${
                   state
                     ? "bg-[#F5C547] !text-black hover:bg-[white]"
@@ -85,6 +100,7 @@ const Events = () => {
                 {language ? "بطاقات تهنئة" : "Greeting Cards"}
               </button>
               <button
+                onClick={buttonHandler}
                 className={` md:py-4 md:px-7 w-[180px] h-[60px]  md:w-auto md:h-auto rounded-full text-white text-sm md:text-lg font-Grotesk font-medium transition-all duration-300 ease-in-out ${
                   state
                     ? "bg-[#F5C547] !text-black hover:bg-[white]"
@@ -94,6 +110,7 @@ const Events = () => {
                 {language ? "ديكورات المنازل" : "Houses Decorations"}
               </button>
               <button
+                onClick={buttonHandler}
                 className={` md:py-4 md:px-7 w-[180px] h-[60px]  md:w-auto md:h-auto rounded-full text-white text-sm md:text-lg font-Grotesk font-medium transition-all duration-300 ease-in-out ${
                   state
                     ? "bg-[#F5C547] !text-black hover:bg-[white]"
@@ -121,11 +138,11 @@ const Events = () => {
           />
           <motion.img
             style={{ x: x4, y: y4 + floatTransition }}
-            whileInView={{ y: [0, -20, 0] }} // Creates a float effect
+            whileInView={{ y: [0, -20, 0] }}
             transition={{
-              duration: 10, // 10 seconds for one cycle
+              duration: 10,
               ease: "easeInOut",
-              repeat: Infinity, // Loops the animation infinitely
+              repeat: Infinity,
             }}
             className="absolute top-28 left-0 w-20 h-20 md:w-40 md:h-40 object-contain"
             src={RedBalloon}
@@ -133,11 +150,11 @@ const Events = () => {
           />
           <motion.img
             style={{ x: x5, y: y5 + floatTransition2 }}
-            whileInView={{ y: [0, -20, 0] }} // Creates a float effect
+            whileInView={{ y: [0, -20, 0] }}
             transition={{
-              duration: 10, // 10 seconds for one cycle
+              duration: 10,
               ease: "easeInOut",
-              repeat: Infinity, // Loops the animation infinitely
+              repeat: Infinity,
             }}
             className="absolute bottom-32 -left-28 md:-left-52 w-20 h-20 md:w-60 md:h-60 object-contain"
             src={GreenBalloon}

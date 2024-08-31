@@ -26,7 +26,7 @@ const Hero = () => {
   const x2 = useTransform(scrollY, [0, 1000], [0, 600]);
   const y2 = useTransform(scrollY, [0, 1000], [0, 500]);
   return (
-    <header className="pb-7 relative">
+    <header id="hero" className="pb-7 relative">
       <Navbar />
       {state ? (
         <img

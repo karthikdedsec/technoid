@@ -2,19 +2,34 @@ import Flag1 from "../assets/flag2.png";
 import Flag2 from "../assets/flag1.png";
 import Lamp from "../assets/lamp.png";
 import Star from "../assets/shineStarc.png";
+import Banner from "../assets/banner.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+import PagesModal from "./PagesModal";
 
 const Identity = () => {
   const { state, language } = useContext(ThemeContext);
   const { scrollY } = useScroll();
+  const [modal, setModal] = useState(false);
+
+  const buttonHandler = () => {
+    setModal(true);
+  };
 
   const y = useTransform(scrollY, [0, 1000], [0, -200]);
 
   return (
     <div className="min-h-screen">
+      {modal && (
+        <PagesModal
+          setModal={setModal}
+          content={<img src={!language ? Banner : Banner} />}
+          button={!language ? "close" : "يغلق"}
+        />
+      )}
+
       <div className="relative">
         <img className="object-fill w-full" src={Flag1} alt="large flag" />
         <motion.img
@@ -37,6 +52,7 @@ const Identity = () => {
               : "After a Whole Year of patiently,but eagerly waiting,Eid is finally here! Hands up everyone who missed the incense smells, the outfits  and the delicious food? But First Lets get Eid -ready with our outfits"}
           </p>
           <button
+            onClick={buttonHandler}
             className={`py-2 px-4 w-44 mx-auto rounded-full text-white text-lg font-Grotesk font-semibold transition-all duration-300 ease-in-out ${
               state
                 ? "bg-[#F5C547] !text-black hover:bg-[white]"

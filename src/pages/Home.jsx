@@ -41,7 +41,13 @@ const Home = () => {
       <Message />
       <Footer />
       {loading && <Loader />}
-      {modal && <Modal setModal={setModal} />}
+      {modal && (
+        <Modal
+          setModal={setModal}
+          content={"For better user experience turn the audio on"}
+          button={"ok"}
+        />
+      )}
     </div>
   );
 };

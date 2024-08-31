@@ -225,7 +225,8 @@ const Message = () => {
 
       <div className="section-container pt-52">
         <div className="flex justify-center pt-9 pb-16">
-          <button
+          <a
+            href="#hero"
             className={`py-3 px-12 mx-auto rounded-full text-white text-lg font-Grotesk font-semibold transition-all duration-300 ease-in-out ${
               state
                 ? "bg-[#F5C547] !text-black hover:bg-[white]"
@@ -233,7 +234,7 @@ const Message = () => {
             }`}
           >
             {language ? "أعد الرحلة" : "Replay the journey"}
-          </button>
+          </a>
         </div>
         <div className="flex justify-center pb-36 pt-6">
           <div className="p-12 border-r-[1px] border-[#902cf5]">
