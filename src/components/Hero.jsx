@@ -22,9 +22,11 @@ const Hero = () => {
   const y = useTransform(scrollY, [0, 1000], [0, 200]);
   const x1 = useTransform(scrollY, [0, 1000], [0, -600]);
   const y1 = useTransform(scrollY, [0, 1000], [0, -200]);
+  // console.log(scrollY);
 
-  const x2 = useTransform(scrollY, [0, 1000], [0, 600]);
-  const y2 = useTransform(scrollY, [0, 1000], [0, 500]);
+  const scrollStopPoint = 300;
+  const x2 = useTransform(scrollY, [0, scrollStopPoint, 1000], [0, 300, 300]);
+  const y2 = useTransform(scrollY, [0, scrollStopPoint, 1000], [0, 200, 200]);
   return (
     <header id="hero" className="pb-7 relative">
       <Navbar />

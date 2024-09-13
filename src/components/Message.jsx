@@ -50,6 +50,7 @@ const Message = () => {
           src={Background}
           alt="background image"
         />
+        {/* absolute images */}
         <img
           className="absolute object-contain w-24 h-24 sm:w-36 sm:h-36 animate-float top-48 sm:top-80 right-24 sm:right-[440px] z-50"
           src={DualKite}
