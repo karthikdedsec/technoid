@@ -38,16 +38,14 @@ const Quote = () => {
       }
     };
 
-    // Initial update on component mount
     updateScrollRange();
 
     // Update scroll ranges on window resize
     window.addEventListener("resize", updateScrollRange);
 
-    // Clean up event listener
     return () => window.removeEventListener("resize", updateScrollRange);
   }, []);
-  // Adjust the scale based on scrollY value
+
   const quoteScale = useTransform(scrollY, scrollRange, [1, 0.4]);
   const y = useTransform(scrollY, scrollRange, stopRangey);
   const x = useTransform(scrollY, scrollRange, stopRangex);
